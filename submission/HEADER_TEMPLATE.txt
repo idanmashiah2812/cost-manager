@@ -1,0 +1,22 @@
+Team Manager:
+  - First Name: __________
+  - Last Name: __________
+
+Team Members:
+  - First Name: __________ | Last Name: __________ | ID: __________ | Mobile: __________ | Email: __________
+  - First Name: __________ | Last Name: __________ | ID: __________ | Mobile: __________ | Email: __________
+  - (add more lines if needed)
+
+Video (YouTube Unlisted):
+  - Link: https://youtube.com/__________
+
+Collaborative Tools Summary (<= 100 words):
+  - Tool #1: __________ (example: GitHub)
+  - Tool #2: __________ (example: Trello)
+  - Summary: __________
+
+Notes for the tester/reviewer:
+  - Users service URL: __________
+  - Costs service URL: __________
+  - Logs service URL: __________
+  - Admin service URL: __________
