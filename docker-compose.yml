@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  users-service:
+    build: ./services/users-service
+    env_file:
+      - ./services/users-service/.env
+    ports:
+      - "3001:3001"
+
+  costs-service:
+    build: ./services/costs-service
+    env_file:
+      - ./services/costs-service/.env
+    ports:
+      - "3002:3002"
+
+  logs-service:
+    build: ./services/logs-service
+    env_file:
+      - ./services/logs-service/.env
+    ports:
+      - "3003:3003"
+
+  admin-service:
+    build: ./services/admin-service
+    env_file:
+      - ./services/admin-service/.env
+    ports:
+      - "3004:3004"
