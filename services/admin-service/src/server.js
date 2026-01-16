@@ -55,6 +55,9 @@ app.get('/api/about', asyncHandler(async (req, res) => {
 app.use(notFoundHandler);
 app.use(errorHandler);
 
+// Export app for testing
+module.exports = app;
+
 async function start() {
   // Admin service still connects to MongoDB because it must log every request to DB
   await connectToMongo();
@@ -65,7 +68,9 @@ async function start() {
   });
 }
 
-start().catch((err) => {
-  logger.error({ err }, 'Failed to start admin-service');
-  process.exit(1);
-});
+if (require.main === module) {
+  start().catch((err) => {
+    logger.error({ err }, 'Failed to start admin-service');
+    process.exit(1);
+  });
+}

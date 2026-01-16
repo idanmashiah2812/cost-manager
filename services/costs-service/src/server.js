@@ -211,7 +211,12 @@ async function start() {
   });
 }
 
-start().catch((err) => {
-  logger.error({ err }, 'Failed to start costs-service');
-  process.exit(1);
-});
+// Export app for testing
+module.exports = app;
+
+if (require.main === module) {
+  start().catch((err) => {
+    logger.error({ err }, 'Failed to start costs-service');
+    process.exit(1);
+  });
+}

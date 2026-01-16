@@ -1,12 +1,24 @@
 version: '3.9'
 
 services:
+  mongodb:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - mongodb_data:/data/db
+
   users-service:
     build: ./services/users-service
     env_file:
       - ./services/users-service/.env
     ports:
       - "3001:3001"
+    depends_on:
+      - mongodb
 
   costs-service:
     build: ./services/costs-service
@@ -14,6 +26,8 @@ services:
       - ./services/costs-service/.env
     ports:
       - "3002:3002"
+    depends_on:
+      - mongodb
 
   logs-service:
     build: ./services/logs-service
@@ -21,6 +35,8 @@ services:
       - ./services/logs-service/.env
     ports:
       - "3003:3003"
+    depends_on:
+      - mongodb
 
   admin-service:
     build: ./services/admin-service
@@ -28,3 +44,8 @@ services:
       - ./services/admin-service/.env
     ports:
       - "3004:3004"
+    depends_on:
+      - mongodb
+
+volumes:
+  mongodb_data:

@@ -39,6 +39,9 @@ app.get('/api/logs', asyncHandler(async (req, res) => {
 app.use(notFoundHandler);
 app.use(errorHandler);
 
+// Export app for testing
+module.exports = app;
+
 async function start() {
   await connectToMongo();
   const port = Number(process.env.PORT || 3003);
@@ -48,7 +51,9 @@ async function start() {
   });
 }
 
-start().catch((err) => {
-  logger.error({ err }, 'Failed to start logs-service');
-  process.exit(1);
-});
+if (require.main === module) {
+  start().catch((err) => {
+    logger.error({ err }, 'Failed to start logs-service');
+    process.exit(1);
+  });
+}
