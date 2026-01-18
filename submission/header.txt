@@ -1,0 +1,12 @@
+Team Members:
+  - First Name: Idan | Last Name: Mashiah | ID: 211484035 | Mobile: 0502330191
+  - First Name: Alon | Last Name: Iozef | ID: 211670930 | Mobile: 0586043122
+
+Video (YouTube Unlisted):
+  - Link: https://youtube.com/__________
+
+Notes for the tester/reviewer:
+  - Users service URL: https://cost-manager-oyrd.onrender.com
+  - Costs service URL: https://cost-manager-costs-service-3ed6.onrender.com
+  - Logs service URL: https://cost-manager-logs-service-i4sj.onrender.com
+  - Admin service URL: https://cost-manager-hyu7.onrender.com
