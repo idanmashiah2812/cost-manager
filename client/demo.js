@@ -3,10 +3,10 @@
 // Optional demo client: calls your four services.
 // Requires Node 18+ (built-in fetch).
 
-const USERS = process.env.USERS_URL || 'http://localhost:3001';
-const COSTS = process.env.COSTS_URL || 'http://localhost:3002';
-const LOGS  = process.env.LOGS_URL  || 'http://localhost:3003';
-const ADMIN = process.env.ADMIN_URL || 'http://localhost:3004';
+const USERS = process.env.USERS_URL || 'http://USERS_BASE_URL:3001';
+const COSTS = process.env.COSTS_URL || 'http://COSTS_BASE_URL:3002';
+const LOGS  = process.env.LOGS_URL  || 'http://BASE_URL:3003';
+const ADMIN = process.env.ADMIN_URL || 'http://ADMIN_BASE_URL:3004';
 
 async function http(method, url, body) {
   const res = await fetch(url, {

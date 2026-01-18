@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "node src/server.js"
   },
   "dependencies": {
     "@mongoosejs/double": "^0.1.0",
