@@ -1,0 +1,13 @@
+{
+  "name": "cost-manager-rest-4-processes",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Learning scaffold: 4-process Express/Mongoose REST services with computed monthly report and MongoDB logs",
+  "scripts": {
+    "install:all": "npm --prefix services/users-service install && npm --prefix services/costs-service install && npm --prefix services/logs-service install && npm --prefix services/admin-service install",
+    "dev": "concurrently -n users,costs,logs,admin -c auto \"npm --prefix services/users-service run dev\" \"npm --prefix services/costs-service run dev\" \"npm --prefix services/logs-service run dev\" \"npm --prefix services/admin-service run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
